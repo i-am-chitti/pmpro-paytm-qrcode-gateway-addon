@@ -2,7 +2,7 @@
 /**
  * Paytm Payment Gateway supporting only QR code method.
  *
- * @package paytm-gateway-pmpro
+ * @package paytm-gateway-pmpro-addon
  */
 
 	//phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase

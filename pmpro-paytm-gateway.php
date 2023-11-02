@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Paytm Gateway for Paid Memberships Pro
  * Description: Paytm Gateway for Paid Memberships Pro plugin
- * Version: 1.0
+ * Version: 1.0.0
  * License:     GPL2
  * Text Domain: pmpro
  *

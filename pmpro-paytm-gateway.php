@@ -3,10 +3,11 @@
  * Plugin Name: Paytm Gateway for Paid Memberships Pro
  * Description: Paytm Gateway for Paid Memberships Pro plugin
  * Version: 1.0.0
- * License:     GPL2
+ * License: GPLv3 or later
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: pmpro
  *
- * @package paytm-gateway-pmpro
+ * @package paytm-gateway-pmpro-addon
  */
 
 define( 'PMPRO_PAYTMGATEWAY_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );

@@ -20,5 +20,4 @@ So, this addon aims to solve the issue by integrating paytm gateway. Currently, 
    ![qrcode](./docs/images/qrcode.png)
 5. One can scan the code and do payment.
 6. If submitted without payment, it will throw an error and one can re-try again. On successful payment, it redirects to membership account page.
-7. In case of accessing restricted content, it redirects the user to membership levels page.
 

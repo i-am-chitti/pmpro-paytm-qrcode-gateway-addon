@@ -84,14 +84,17 @@ class PMProGateway_Paytm extends PMProGateway {
 	public static function pmpro_checkout_before_submit_button() {
 		global $pmpro_level;
 
-		$new_order = new MemberOrder();
+		if ( empty( $_SESSION['order_id'] ) ) {
+			$new_order            = new MemberOrder();
+			$order_id             = $new_order->getRandomCode();
+			$_SESSION['order_id'] = $order_id;
+		} else {
+			$order_id = sanitize_text_field( wp_unslash( $_SESSION['order_id'] ) );
+		}
 
-		// $order_id             = 'ORDER_' . time();
-		$order_id = $new_order->getRandomCode();
-		// $order_id             = 'ORDER_1685355962182'; // dummy id
-		$amount               = intval( $pmpro_level->initial_payment );
-		$_SESSION['order_id'] = $order_id;
-		$_SESSION['amount']   = $amount;
+		$amount = intval( $pmpro_level->initial_payment );
+
+		$_SESSION['amount'] = $amount;
 		?>
 		<div style="display: flex;">
 		<div id="paytm-qrcode" style="background-color: white; padding: 10px;"></div>

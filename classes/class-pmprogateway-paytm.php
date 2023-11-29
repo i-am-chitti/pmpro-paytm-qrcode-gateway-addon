@@ -446,6 +446,9 @@ class PMProGateway_Paytm extends PMProGateway {
 				$bank_txn_id                   = $response_body['BANKTXNID'];
 				$merc_unq_ref                  = $response_body['MERC_UNQ_REF'];
 				$order->notes                  = "Bank TXN ID - $bank_txn_id\nMerchant Unique Ref - $merc_unq_ref";
+
+				unset( $_SESSION['order_id'] );
+				unset( $_SESSION['amount'] );
 				return true;
 
 			} else {

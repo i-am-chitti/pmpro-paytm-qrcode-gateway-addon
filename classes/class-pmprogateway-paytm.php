@@ -97,7 +97,17 @@ class PMProGateway_Paytm extends PMProGateway {
 		$_SESSION['amount'] = $amount;
 		?>
 		<div style="display: flex;">
-		<div id="paytm-qrcode" style="background-color: white; padding: 10px;"></div>
+			<div id="paytm-qrcode" style="background-color: white; padding: 10px;"></div>
+		</div>
+		<div
+		style="margin-top: 20px;"
+		>
+			<a href="upi://pay?cu=INR&pa=<?php echo esc_attr( pmpro_getOption( 'merchant_upi' ) ); ?>&pn=Merchant&am=<?php echo esc_attr( $amount ); ?>&mam=<?php echo esc_attr( $amount ); ?>&tr=<?php echo esc_attr( $order_id ); ?>"
+			class="pmpro_btn"
+			style="background-color: #00a8b6; border: none; color: white;"
+			>
+				Pay now
+			</a>
 		</div>
 		<input type='hidden' name='order_id' id="order-id" value="<?php echo esc_attr( $order_id ); ?>" />
 		<input type="hidden" name="amount" id="amount" value="<?php echo esc_attr( $amount ); ?>" />
